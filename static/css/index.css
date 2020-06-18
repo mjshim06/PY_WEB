@@ -1,0 +1,59 @@
+.main_text{
+                position: absolute;
+                text-align: center;
+                color: white;
+                width: 100%;
+                transform: translate(-50%, -50%);
+                font-family: 'Pacifico', cursive;
+            }
+            #title{
+                left:50%;
+                top:20%;
+                font-size:60px;
+            }
+            #made{
+                left:50%;
+                top:45%;
+                font-size:25px;
+            }
+            #menu{
+                left:50%;
+                top:35%;
+                font-size:30px;
+            }
+            li{
+                display: inline-block;
+                list-style:none;
+                font-size:40px;
+                margin-left:50px;
+                margin-right:50px;
+            }
+            a{
+                text-decoration:none;
+                color:white;
+            }
+            #dlab{
+             color: orangered;
+            }
+            #username{
+                color: greenyellow;
+            }
+            #auth1{
+                left:50%;
+                top:10%;
+            }
+            #auth2{
+                left:50%;
+                top:10%;
+            }
+            .auth_menu{
+                font-size:25px;
+                color:fuchsia;
+            }
+            .greet{
+                font-size:25px;
+            }
+            .userID{
+                color: greenyellow;
+                font-size:35px;
+            }

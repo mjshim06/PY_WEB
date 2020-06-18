@@ -1,0 +1,41 @@
+body{
+            font-family: 'Pacifico', cursive;
+            background-color: black;
+        }
+        .menu{
+            font-size: 3vw;
+            font-family: 'Inria Serif', serif;
+        }
+        .title{
+            font-size: 3vw;
+        }
+        .auth_menu{
+            font-size: 3vw;
+            font-family: 'Inria Serif', serif;
+        }
+        .greet_comment{
+            font-size: 3vw;
+        }
+        .made{
+            font-size: 3vw;
+        }
+        .made_by{
+            font-family: 'Inria Serif', serif;
+        }
+        .sign_in_name{
+            font-family: 'Inria Serif', serif;
+        }
+        .and{
+            font-family: 'Inria Serif', serif;
+        }
+        #index_menu{
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%,  0%);
+            color:white;
+        }
+        .index_a, .index_a:hover{
+            text-decoration:none;
+            color:white;
+        }

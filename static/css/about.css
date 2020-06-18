@@ -1,0 +1,26 @@
+#content {
+            width: 800px;
+            margin: auto;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        .title{
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        #django, #history, #feature{
+            color: deeppink;
+        }
+        #model, #view, #template{
+            color: lightseagreen;
+        }
+        #structure{
+            color: darkgreen;
+            text-align: center;
+        }
+        img{
+            display: block;
+            width: 500px; height: auto;
+            margin: 30px auto;
+        }
+        #logo{
+            width: 200px;
+        }

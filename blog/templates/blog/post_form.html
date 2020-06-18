@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <form method="post" action="." enctype="multipart/form-data">{% csrf_token %}
+                    <div>
+                        {{ form.title.label_tag }}&nbsp;<span class="glyphicon glyphicon-pushpin"></span> {{ form.title }}
+                    </div>
+                    <div>
+                        {{ form.image.label_tag }}&nbsp;<span class="glyphicon glyphicon-open-file"></span> {{ form.image }}
+                    </div>
+                    <div>
+                        {{ form.description.label_tag }}&nbsp;<span class="glyphicon glyphicon-pencil"></span> {{ form.description }}
+                    </div>
+                        <button type="submit">CREATE/UPDATE</button>
+                </form>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+{% endblock %}

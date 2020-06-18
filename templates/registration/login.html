@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>
+<form method="post" action=".">{% csrf_token %}
+    <div>
+        {{ form.username.label_tag }} {{ form.username }}
+    </div>
+    <div>
+        {{ form.password.label_tag }} {{ form.password }}
+    </div>
+    <button type="submit">SIGN IN</button>
+    <input type="hidden" value="{{ next }}">
+</form>
+
+{% endblock %}

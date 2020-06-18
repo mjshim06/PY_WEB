@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4 bookmark_input">
+                <form method="post" action=".">{% csrf_token %}
+                     <div>
+                         <div class="input_style input_alpha">{{ form.title.label_tag }}&nbsp;&nbsp;<span class="glyphicon glyphicon-pushpin"></span>&nbsp;{{ form.title }}</div>
+                         <div class="input_style input_alpha">{{ form.url.label_tag }}&nbsp;&nbsp;<span class="glyphicon glyphicon-link"></span>&nbsp;{{ form.url }}</div>
+                     </div>
+
+                </form>
+                <button class="crupbutton" type="submit">CREATE/UPDATE</button>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+{% endblock %}

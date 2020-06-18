@@ -1,0 +1,17 @@
+.nav_menu {
+            font-size: 2.5vw;
+            font-family: 'Inria Serif', serif;
+        }
+        .auth_menu {
+            font-size: 1.0vw;
+            text-align: right;
+            font-family: 'Inria Serif', serif;
+        }
+        .nav_a{
+            text-decoration:none;
+            color:black;
+        }
+        .nav_a:hover{
+            text-decoration:none;
+            color:orangered;
+        }

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load staticfiles %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Assistant|Inria+Serif|Pacifico&display=swap" rel="stylesheet">
+    <title>Hello, world!</title>
+    <style>
+        body{
+            font-family: 'Pacifico', cursive;
+            background-color: black;
+        }
+        .menu{
+            font-size: 3vw;
+            font-family: 'Inria Serif', serif;
+        }
+        .title{
+            font-size: 3vw;
+        }
+        .auth_menu{
+            font-size: 3vw;
+            font-family: 'Inria Serif', serif;
+        }
+        .greet_comment{
+            font-size: 3vw;
+        }
+        .made{
+            font-size: 3vw;
+        }
+        .made_by{
+            font-family: 'Inria Serif', serif;
+        }
+        .sign_in_name{
+            font-family: 'Inria Serif', serif;
+        }
+        .and{
+            font-family: 'Inria Serif', serif;
+        }
+        #index_menu{
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%,  0%);
+            color:white;
+        }
+        .index_a, .index_a:hover{
+            text-decoration:none;
+            color:white;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<br>
+<div class="cotainer-fluid">
+    <video autoplay muted loop width="100%;">
+        <source src="{% static 'video/SNOWBOARD.mp4' %}">
+    </video>
+</div>
+
+<div class="container" id="index_menu">
+    <br>
+    {% if user.is_active %}
+    <div class="text-center greet_comment">
+        Hello, <span class="sign_in_name">
+        {{ user.get_username }}</span>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-6 auth_menu"><a href="{% url 'logout' %}" class="index_a">
+            SIGN OUT
+        </a></div>
+        <div class="col-md-6 auth_menu"><a href="{% url 'password_change' %}" class="index_a">
+            PW CHANGE
+        </a></div>
+    </div>
+    {% else %}
+        <div class="text-center greet_comment">
+        Welcome, <span class="sign_in_name">Anonymous</span>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-6 auth_menu"><a href="{% url 'login' %}" class="index_a">
+            SIGN IN</a></div>
+        <div class="col-md-6 auth_menu"><a href="{% url 'register' %}" class="index_a">
+            SIGN UP</a></div>
+    </div>
+    {% endif %}
+
+
+    <br>
+    <div class="row text-center title">
+        <div class="col-md-2"></div>
+        <div class="col-md-3">DJANGO</div>
+        <div class="col-md-5">FRAMEWORK</div>
+        <div class="col-md-2"></div>
+    </div>
+    <br>
+    <div class="row text-center  made">
+        <div class="col-md-3"></div>
+        <div class="col-md-3 made_by">Made By</div>
+        <div class="col-md-3">
+            <span>Ryan</span> <span class="and">&amp;</span>
+            <span>DLAB</span>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <br>
+    <div class="row text-center menu">
+        <div class="col-md-3">
+            <a href="{% url 'admin:index' %}" class="index_a">
+                ADMIN
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="{% url 'about' %}" class="index_a">
+                DJANGO
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'bookmark_index' %}" class="index_a">
+                BOOKMARK
+            </a>
+        </div>
+        <div class="col-md-2">
+            <a href="{% url 'blog_index' %}" class="index_a">
+                BLOG
+            </a>
+        </div>
+    </div>
+</div>
+
+</body></html>
+
+
+
+
+
+
+
+
+

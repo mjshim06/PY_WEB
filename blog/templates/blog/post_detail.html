@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Detail Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Pattaya&display=swap" rel="stylesheet">
+    <script>
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://djangotest1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <style>
+        #content{
+            margin: auto;
+            width:1000px; height:auto;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            padding: 50px;
+        }
+        p{
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size:20px;
+        }
+        .description{
+            height:auto;
+        }
+        #title{
+            font-family: 'Pattaya', sans-serif;
+            text-align: center;
+            font-size:90px;
+            margin:0px;
+        }
+        .label{
+            font-family: 'Pattaya', sans-serif;
+            color:orangered;
+            font-size: 30px;
+        }
+        img{
+            display:block;
+            margin:50px auto;
+        }
+        .label:hover{
+            font-family: 'Pattaya', sans-serif;
+            background-color:yellow;
+            font-size: 30px;
+        }
+
+        /* 버튼 꾸미기 추가 */
+        #update_delete_btn{
+            text-align:center;
+            height:50px;
+        }
+        .update_button {
+        background-color: orange;
+        }
+        .delete_button {
+        background-color: orange;
+        }
+    </style>
+</head>
+<body>
+
+<div id="content">
+
+    <!-- 버튼추가 -->
+    <div id="update_delete_btn">
+        <a href="{% url 'post_update' post.id %}">
+            <button class="update_button">UPDATE</button>
+        </a>
+        &nbsp;&nbsp;
+        <a href="{% url 'post_delete' post.id %}">
+            <button class="delete_button">DELETE</button>
+        </a>
+    </div>
+
+    <h1 id="title">{{ object.title }}</h1>
+    <div class="box">
+        <p class="description"><span class="label">Description: </span>{{ object.description }}</p>
+        <p><span class="label">Create Date: </span>{{ object.create_date }}</p>
+        <p><span class="label">Modify Date: </span>{{ object.modify_date }}</p>
+        <img src="{{ object.image.url }}" width="600" height="600">
+        <div id="disqus_thread"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
